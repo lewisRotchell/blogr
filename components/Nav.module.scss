@@ -1,0 +1,14 @@
+.nav {
+  background-color: transparent;
+  position: absolute;
+  top: 56px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .hamburgerBtn {
+    background-color: transparent;
+    border: none;
+  }
+}
