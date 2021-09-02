@@ -1,0 +1,47 @@
+@import "../styles/abstracts/variables";
+.sectionA {
+  margin-top: 46px;
+  text-align: center;
+
+  .sectionTitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 2.681rem;
+    color: $heading-color;
+    margin-bottom: 7px;
+  }
+
+  .imgContainer {
+    width: 326px;
+    margin: 0 auto;
+  }
+
+  .articleTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 2rem;
+    color: $heading-color;
+    width: 318px;
+    margin: 0 auto;
+  }
+
+  .articleText {
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.0313;
+    color: $heading-color;
+    padding: 0 25px;
+  }
+
+  .articleA {
+    margin-top: 26px;
+  }
+
+  .articleB {
+    margin-top: 40px;
+  }
+}
