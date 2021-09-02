@@ -2,13 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
 
 html,
-body {
+body,
+#__next {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
   font-family: "Overpass", sans-serif;
   font-weight: 300;
+  height: 100%;
 }
 
 h1,
@@ -27,4 +29,9 @@ a {
 *:before,
 *:after {
   box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }

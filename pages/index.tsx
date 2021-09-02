@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Header } from "../sections/Header";
 import { SectionA } from "../sections/SectionA";
 import { SectionB } from "../sections/SectionB";
+import { SectionC } from "../sections/SectionC";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <main>
         <SectionA />
         <SectionB />
+        <SectionC />
       </main>
     </>
   );

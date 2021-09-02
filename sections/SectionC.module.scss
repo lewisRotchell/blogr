@@ -1,0 +1,40 @@
+@import "../styles/abstracts/variables";
+
+.sectionC {
+  text-align: center;
+
+  .imgContainer {
+    width: 375px;
+    margin-top: 79px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .articleGroup {
+    margin-top: 46px;
+    padding: 0 25px;
+    color: $heading-color;
+
+    .articleA {
+      margin-bottom: 40px;
+    }
+
+    .articleTitle {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.75rem;
+      line-height: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .articleText {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.75rem;
+      letter-spacing: 0.5px;
+    }
+  }
+}
