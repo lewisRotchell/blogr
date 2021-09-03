@@ -9,11 +9,13 @@ interface FooterProps {}
 export const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <footer className={classes.footer}>
-      <Image src={Logo} width={101} height={40} />
-      <nav>
+      <div className={classes.imgContainer}>
+        <Image src={Logo} width={101} height={40} />
+      </div>
+      <nav className={classes.nav}>
         <div className={classes.navGroup}>
           <p className={classes.navGroupTitle}>Product</p>
-          <ul>
+          <ul className={classes.navGroupList}>
             <li>
               <Link href="/">
                 <a>Overview</a>
@@ -43,7 +45,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         </div>
         <div className={classes.navGroup}>
           <p className={classes.navGroupTitle}>Company</p>
-          <ul>
+          <ul className={classes.navGroupList}>
             <li>
               <Link href="/">
                 <a>About</a>
@@ -68,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         </div>
         <div className={classes.navGroup}>
           <p className={classes.navGroupTitle}>Company</p>
-          <ul>
+          <ul className={classes.navGroupList}>
             <li>
               <Link href="/">
                 <a>Contact</a>

@@ -3,11 +3,11 @@
   background: url("/images/circles-bg.svg"),
     linear-gradient(135deg, #2d2e40 0%, #3f4164 100%);
   background-repeat: no-repeat, no-repeat;
-  background-size: 100% 100% 100% 100%;
+  background-size: 100%;
   @media (min-width: 400px) {
     background-size: 100% 100%;
   }
-  background-position: 60% -10%;
+  background-position: top 7px center;
   height: 625px;
   border-radius: 0px 100px;
 
@@ -21,7 +21,7 @@
   .imgContainer {
     transform: translateY(-172px);
     margin-bottom: -172px;
-    width: 353px;
+    width: 100%;
   }
 
   .articleFeature {
