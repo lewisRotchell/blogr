@@ -24,18 +24,33 @@
     font-size: 2.25rem;
     font-weight: 600;
     line-height: 3.447rem;
+
+    @include large {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 4rem;
+      line-height: 6.125rem;
+      text-align: center;
+      letter-spacing: -1.92px;
+    }
   }
 
   p {
     font-size: 1.125rem;
     font-weight: 300;
     line-height: 1.724rem;
+    font-style: normal;
+
+    @include large {
+      font-size: 1.25rem;
+    }
   }
 
   .ctaBtns {
-    margin: 43px 19px;
+    margin: 43px auto;
     display: flex;
     justify-content: space-between;
+    width: 290px;
   }
 
   .btnLeft {

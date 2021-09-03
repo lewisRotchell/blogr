@@ -5,6 +5,7 @@ import Hamburger from "../public/images/icon-hamburger.svg";
 import classes from "./Nav.module.scss";
 import ArrowLight from "../public/images/arrow-light.svg";
 import Link from "next/link";
+import { Button } from "./Button";
 
 interface NavProps {}
 
@@ -29,6 +30,11 @@ export const Nav: React.FC<NavProps> = ({}) => {
             <Image src={ArrowLight} width={12} height={8} />
           </li>
         </ul>
+      </div>
+
+      <div className={classes.navGroupB}>
+        <span className={classes.loginText}>Login</span>
+        <Button style={classes.signUpBtn}>Sign Up</Button>
       </div>
 
       <button
