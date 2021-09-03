@@ -1,16 +1,20 @@
 import React from "react";
 import classes from "./Button.module.scss";
-
+import Link from "next/link";
 interface ButtonProps {
   children: string;
   style?: string;
-  onClick?: () => void;
+  linkTo?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, style, onClick }) => {
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  style,
+  linkTo = "/",
+}) => {
   return (
-    <button className={`${classes.button} ${style}`} onClick={onClick}>
-      {children}
-    </button>
+    <Link href={linkTo}>
+      <a className={`${classes.button} ${style}`}>{children}</a>
+    </Link>
   );
 };
