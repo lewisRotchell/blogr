@@ -54,3 +54,9 @@ ul {
     padding-right: 165px;
   }
 }
+
+p {
+  @include medium {
+    text-align: left;
+  }
+}

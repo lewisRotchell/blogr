@@ -10,7 +10,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
     <header className={`${classes.header} container`}>
       <div className={classes.content}>
         <h1>A modern publishing platform</h1>
-        <p>Grow your audience and build your online brand</p>
+        <span>Grow your audience and build your online brand</span>
         <div className={classes.ctaBtns}>
           <Button style={classes.btnLeft}>Start for Free</Button>
           <Button style={classes.btnRight}>Learn More</Button>

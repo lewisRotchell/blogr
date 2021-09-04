@@ -57,6 +57,10 @@
     padding: 0 25px;
     margin-top: 16px;
 
+    @include medium {
+      padding: 0 75px;
+    }
+
     @include large {
       width: 540px;
       height: 178px;

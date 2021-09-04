@@ -1,4 +1,5 @@
 @import "../styles/abstracts/variables";
+@import "../styles/abstracts/mixins";
 
 .footer {
   background-color: $footer-bg;
@@ -6,19 +7,41 @@
   margin-top: 100px;
   text-align: center;
 
+  @include large {
+    height: 359px;
+    text-align: left;
+  }
+
   .imgContainer {
     padding-top: 75px;
     margin-bottom: 72px;
+
+    @include large {
+      margin-right: 184px;
+      padding-top: 0;
+    }
   }
 
   .nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    @include large {
+      flex-direction: row;
+      justify-content: center;
+      align-items: unset;
+      padding-top: 70px;
+    }
 
     .navGroup {
       color: #fff;
       &:last-child {
         margin-bottom: 35px;
+      }
+
+      @include large {
+        margin-right: 229px;
       }
     }
 
@@ -29,6 +52,10 @@
       font-size: 1.125rem;
       line-height: 2.063rem;
       margin-bottom: 21px;
+
+      @include large {
+        font-size: 0.938rem;
+      }
     }
 
     .navGroupList {
@@ -40,6 +67,10 @@
         font-size: 1.125rem;
         line-height: 2.063rem;
         opacity: 0.75;
+
+        @include large {
+          font-size: 0.938rem;
+        }
       }
     }
   }

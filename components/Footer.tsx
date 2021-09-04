@@ -9,10 +9,10 @@ interface FooterProps {}
 export const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <footer className={classes.footer}>
-      <div className={classes.imgContainer}>
-        <Image src={Logo} width={101} height={40} />
-      </div>
       <nav className={classes.nav}>
+        <div className={classes.imgContainer}>
+          <Image src={Logo} width={101} height={40} />
+        </div>
         <div className={classes.navGroup}>
           <p className={classes.navGroupTitle}>Product</p>
           <ul className={classes.navGroupList}>
