@@ -1,8 +1,18 @@
 @import "../styles/abstracts/variables";
+@import "../styles/abstracts/mixins";
 
 .sectionC {
   text-align: center;
   width: 100%;
+  position: relative;
+
+  @include large {
+    height: 786px;
+    margin-top: 116px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .imgContainer {
     width: 100%;
@@ -11,12 +21,27 @@
     img {
       width: 100%;
     }
+
+    @include large {
+      max-width: 920px;
+      position: absolute;
+      left: -260px;
+      top: -70px;
+    }
   }
 
   .articleGroup {
     margin-top: 46px;
     padding: 0 25px;
     color: $heading-color;
+    @include large {
+      width: 416px;
+      text-align: left;
+      margin-left: 735px;
+      padding: 0;
+      width: 540px;
+      margin-top: 0;
+    }
 
     .articleA {
       margin-bottom: 40px;

@@ -21,6 +21,7 @@
     background-size: 60% 130%, 100% 100%;
     background-position: left 0px center, 100%;
     margin-top: 310px;
+    position: relative;
   }
 
   .article {
@@ -46,7 +47,7 @@
 
     @include large {
       width: 550px;
-      margin-left: 150px;
+      margin-left: 125px;
       margin-right: 78px;
       transform: translateY(-80px);
     }
@@ -59,9 +60,12 @@
     @include large {
       width: 540px;
       height: 178px;
-      margin-top: 111px;
-      margin-bottom: 111px;
+
       padding: 0;
+      position: absolute;
+      left: 735px;
+      top: 111px;
+      bottom: 111px;
     }
   }
 
