@@ -12,6 +12,7 @@ body,
   font-weight: 300;
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 h1,
@@ -24,6 +25,7 @@ p {
 a {
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
 }
 
 *,
@@ -59,4 +61,8 @@ p {
   @include medium {
     text-align: left;
   }
+}
+
+btn {
+  cursor: pointer;
 }

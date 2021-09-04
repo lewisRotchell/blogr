@@ -9,3 +9,9 @@
     @content;
   }
 }
+
+@mixin navBreakpoint {
+  @media (min-width: 978px) {
+    @content;
+  }
+}

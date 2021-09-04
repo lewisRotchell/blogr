@@ -1,0 +1,21 @@
+@import "../styles/abstracts/mixins";
+@import "../styles/abstracts/variables";
+
+.mobileNav {
+  position: absolute;
+  top: 110px;
+  width: 324px;
+  height: 511px;
+  background-color: #fff;
+  left: 50%;
+  transform: translate(-50%);
+
+  @include navBreakpoint {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -13,8 +13,12 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1112px;
-  @include large {
+  @include navBreakpoint {
     top: 83px;
+    padding: 0 24px;
+  }
+
+  @include large {
     padding: 0;
   }
 
@@ -22,7 +26,7 @@
     width: 82px;
     height: 32px;
 
-    @include large {
+    @include navBreakpoint {
       width: 100.62px;
       height: 39.43px;
       margin-right: 64.38px;
@@ -38,15 +42,19 @@
     display: none !important;
     align-items: center;
 
-    @include large {
-      display: flex;
+    @include navBreakpoint {
+      display: flex !important;
     }
+  }
+
+  .navGroupA {
+    display: flex;
   }
 
   .navGroupB {
     display: none;
     align-items: center;
-    @include large {
+    @include navBreakpoint {
       display: flex;
     }
   }
@@ -94,8 +102,9 @@
   .hamburgerBtn {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 
-    @include large {
+    @include navBreakpoint {
       display: none;
     }
   }

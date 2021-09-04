@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "../components/Button";
 import { Nav } from "../components/Nav";
+import Portal from "../components/MobileNav";
 import classes from "./Header.module.scss";
 
 interface HeaderProps {}
@@ -16,6 +17,9 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           <Button style={classes.btnRight}>Learn More</Button>
         </div>
       </div>
+      {/* <Portal>
+        <p className={classes.portal}>hello</p>
+      </Portal> */}
     </header>
   );
 };
