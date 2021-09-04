@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./SectionB.module.scss";
 import Image from "next/image";
-import PhonesImg from "../public/images/illustration-phones.svg";
+import PhonesImg from "../public/images/phones.svg";
 
 interface SectionBProps {}
 

@@ -1,3 +1,4 @@
+@import "../styles/abstracts/mixins";
 .sectionB {
   margin-top: 253px;
   background: url("/images/circles-bg.svg"),
@@ -10,23 +11,58 @@
   background-position: top 7px center;
   height: 625px;
   border-radius: 0px 100px;
+  width: 100%;
+
+  @include large {
+    height: 400px;
+    background: url("/images/circles-bg-desktop.svg"),
+      linear-gradient(135deg, #2d2e40 0%, #3f4164 100%);
+    background-repeat: no-repeat;
+    background-size: 60% 130%, 100% 100%;
+    background-position: left 0px center, 100%;
+    margin-top: 310px;
+  }
 
   .article {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: -172px;
+
+    @include large {
+      flex-direction: row;
+    }
   }
 
   .imgContainer {
     transform: translateY(-172px);
     margin-bottom: -172px;
     width: 100%;
+    max-width: 550px;
+
+    img {
+      width: 100%;
+    }
+
+    @include large {
+      width: 550px;
+      margin-left: 150px;
+      margin-right: 78px;
+      transform: translateY(-80px);
+    }
   }
 
   .articleFeature {
     padding: 0 25px;
     margin-top: 16px;
+
+    @include large {
+      width: 540px;
+      height: 178px;
+      margin-top: 111px;
+      margin-bottom: 111px;
+      padding: 0;
+    }
   }
 
   .articleTitle {
@@ -36,6 +72,10 @@
     text-align: center;
     letter-spacing: -1.2px;
     color: #fff;
+
+    @include large {
+      text-align: left;
+    }
   }
 
   .articleText {
@@ -46,5 +86,8 @@
     text-align: center;
     letter-spacing: 0.5px;
     margin-top: 10px;
+    @include large {
+      text-align: left;
+    }
   }
 }
