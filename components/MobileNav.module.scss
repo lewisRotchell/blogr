@@ -5,17 +5,52 @@
   position: absolute;
   top: 110px;
   width: 324px;
-  height: 511px;
+  height: 0px;
   background-color: #fff;
   left: 50%;
   transform: translate(-50%);
+  // display: none;
+  visibility: hidden;
+  overflow-y: hidden;
+  transition: all 0.5s ease-in-out;
+  color: $heading-color;
 
   @include navBreakpoint {
     display: none;
   }
 
   nav {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .navButton {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    margin-bottom: 24px;
+    color: $heading-color;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+
+  .arrowContainer {
+    position: absolute;
+    top: -2px;
+    right: -8px;
+  }
+}
+
+.showMenu {
+  display: block;
+  height: 511px;
+  transition: all 0.5s ease-in-out;
+  visibility: visible;
+  @include navBreakpoint {
+    display: none;
   }
 }

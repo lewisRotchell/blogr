@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "../public/images/Blogr-logo.svg";
 import Hamburger from "../public/images/icon-hamburger.svg";
+import Close from "../public/images/icon-close.svg";
 import classes from "./Nav.module.scss";
 import ArrowLight from "../public/images/arrow-light.svg";
 import { Button } from "./Button";
@@ -44,15 +45,24 @@ export const Nav: React.FC<NavProps> = ({}) => {
         </div>
 
         <button
-          className={classes.hamburgerBtn}
+          className={`${classes.hamburgerBtn} ${!showMenu ? classes.show : ""}`}
           aria-expanded="false"
           aria-label="menu"
           onClick={handleClick}
         >
           <Image width={32} height={18} src={Hamburger} alt={""} />
         </button>
+
+        <button
+          className={`${classes.closeBtn} ${showMenu ? classes.show : ""}`}
+          aria-expanded="true"
+          aria-label="menu"
+          onClick={handleClick}
+        >
+          <Image width={24} height={24} src={Close} alt={""} />
+        </button>
       </nav>
-      {showMenu && <MobileNav />}
+      <MobileNav showMenu={showMenu} />
     </>
   );
 };
