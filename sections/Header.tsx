@@ -17,9 +17,6 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           <Button style={classes.btnRight}>Learn More</Button>
         </div>
       </div>
-      {/* <Portal>
-        <p className={classes.portal}>hello</p>
-      </Portal> */}
     </header>
   );
 };

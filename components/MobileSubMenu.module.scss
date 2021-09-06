@@ -2,14 +2,17 @@
   margin: 0 24px;
   width: 276px;
   background-color: rgba(45, 46, 64, 0.08);
-  margin-bottom: 24px;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
 
   .subMenuList {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 17px;
-    margin-bottom: 25px;
+    margin-bottom: 13px;
 
     li {
       color: hsla(209, 48%, 24%, 1);
@@ -17,7 +20,21 @@
       font-weight: 600;
       font-size: 1rem;
       font-family: "Overpass";
+      mix-blend-mode: normal;
+      opacity: 0.75;
+    }
+
+    a {
+      display: inline-block;
       margin-bottom: 12px;
+      line-height: 1.75rem;
     }
   }
+}
+
+.showMenu {
+  max-height: 600px;
+  margin-bottom: 24px;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
 }

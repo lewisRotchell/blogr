@@ -69,7 +69,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           </ul>
         </div>
         <div className={classes.navGroup}>
-          <p className={classes.navGroupTitle}>Company</p>
+          <p className={classes.navGroupTitle}>Contact</p>
           <ul className={classes.navGroupList}>
             <li>
               <Link href="/">

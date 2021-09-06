@@ -15,6 +15,7 @@ export const SectionB: React.FC<SectionBProps> = ({}) => {
             width={353}
             height={363}
             layout={"responsive"}
+            alt={"phones"}
           ></Image>
         </div>
         <div className={classes.articleFeature}>

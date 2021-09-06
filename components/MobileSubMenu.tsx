@@ -4,11 +4,15 @@ import Link from "next/link";
 
 interface MobileSubMenuProps {
   menuItems: string[];
+  open: boolean;
 }
 
-export const MobileSubMenu: React.FC<MobileSubMenuProps> = ({ menuItems }) => {
+export const MobileSubMenu: React.FC<MobileSubMenuProps> = ({
+  menuItems,
+  open,
+}) => {
   return (
-    <div className={classes.mobileSubMenu}>
+    <div className={`${classes.mobileSubMenu} ${open ? classes.showMenu : ""}`}>
       <ul className={classes.subMenuList}>
         {menuItems.map((item: string, index: number) => (
           <li key={index}>

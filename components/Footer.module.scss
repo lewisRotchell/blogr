@@ -77,5 +77,9 @@
 
   p {
     text-align: center;
+
+    @include large {
+      text-align: left;
+    }
   }
 }
