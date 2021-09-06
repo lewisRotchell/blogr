@@ -65,8 +65,18 @@
         font-style: normal;
         font-weight: normal;
         font-size: 1.125rem;
-        line-height: 2.063rem;
-        opacity: 0.75;
+        margin-bottom: 16px;
+
+        a {
+          opacity: 0.75;
+          transition: all 0.2s ease-in-out;
+          border-bottom: 1px solid transparent;
+          &:hover {
+            opacity: 1;
+            border-bottom: 1px solid #fff;
+            transition: all 0.2s ease-in-out;
+          }
+        }
 
         @include large {
           font-size: 0.938rem;

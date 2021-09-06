@@ -7,11 +7,25 @@ import classes from "./Nav.module.scss";
 import ArrowLight from "../public/images/arrow-light.svg";
 import { Button } from "./Button";
 import MobileNav from "./MobileNav";
+import { NavSubMenu } from "./NavSubMenu";
 
 interface NavProps {}
 
+interface ISubMenu {
+  product: boolean;
+  company: boolean;
+  connect: boolean;
+}
+
 export const Nav: React.FC<NavProps> = ({}) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [subMenu, setSubMenu] = useState<ISubMenu>({
+    product: false,
+    company: false,
+    connect: false,
+  });
+
+  console.log(subMenu);
 
   const handleClick = () => {
     setShowMenu(!showMenu);
@@ -24,17 +38,103 @@ export const Nav: React.FC<NavProps> = ({}) => {
             <Image layout={"responsive"} src={Logo} alt={"blogr"} />
           </div>
           <ul className={classes.navList}>
-            <li className={classes.navItem}>
+            <li
+              onMouseEnter={() =>
+                setSubMenu({
+                  product: true,
+                  company: false,
+                  connect: false,
+                })
+              }
+              onMouseLeave={() =>
+                setSubMenu({
+                  product: false,
+                  company: false,
+                  connect: false,
+                })
+              }
+              className={classes.navItem}
+            >
               <span className={classes.navItemText}>Product</span>
-              <Image src={ArrowLight} width={12} height={8} />
+              <div
+                className={`${classes.arrowContainer} ${
+                  subMenu.product ? classes.flipArrow : ""
+                }`}
+              >
+                <Image src={ArrowLight} width={12} height={8} />
+              </div>
+
+              <NavSubMenu
+                open={subMenu.product}
+                menuItems={[
+                  "Overview",
+                  "Pricing",
+                  "Marketplace",
+                  "Features",
+                  "Integrations",
+                ]}
+              />
             </li>
-            <li className={classes.navItem}>
+            <li
+              onMouseEnter={() =>
+                setSubMenu({
+                  product: false,
+                  company: true,
+                  connect: false,
+                })
+              }
+              onMouseLeave={() =>
+                setSubMenu({
+                  product: false,
+                  company: false,
+                  connect: false,
+                })
+              }
+              className={classes.navItem}
+            >
               <span className={classes.navItemText}>Company</span>
-              <Image src={ArrowLight} width={12} height={8} />
+              <div
+                className={`${classes.arrowContainer} ${
+                  subMenu.company ? classes.flipArrow : ""
+                }`}
+              >
+                <Image src={ArrowLight} width={12} height={8} />
+              </div>
+              <NavSubMenu
+                open={subMenu.company}
+                menuItems={["About", "Team", "Blog", "Careers"]}
+              />
             </li>
-            <li className={classes.navItem}>
+
+            <li
+              onMouseEnter={() =>
+                setSubMenu({
+                  product: false,
+                  company: false,
+                  connect: true,
+                })
+              }
+              onMouseLeave={() =>
+                setSubMenu({
+                  product: false,
+                  company: false,
+                  connect: false,
+                })
+              }
+              className={classes.navItem}
+            >
               <span className={classes.navItemText}>Connect</span>
-              <Image src={ArrowLight} width={12} height={8} />
+              <div
+                className={`${classes.arrowContainer} ${
+                  subMenu.connect ? classes.flipArrow : ""
+                }`}
+              >
+                <Image src={ArrowLight} width={12} height={8} />
+              </div>
+              <NavSubMenu
+                open={subMenu.connect}
+                menuItems={["Contact", "Newsletter", "LinkedIn"]}
+              />
             </li>
           </ul>
         </div>

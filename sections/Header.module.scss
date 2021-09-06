@@ -56,12 +56,26 @@
   .btnLeft {
     color: $cta-text;
     background-color: #fff;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #ff7b86;
+      transition: all 0.2s ease-in-out;
+      color: #fff;
+    }
   }
 
   .btnRight {
     color: #fff;
     background-color: transparent;
     border: 1px solid #fff;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #fff;
+      transition: all 0.2s ease-in-out;
+      color: #ff7b86;
+    }
   }
 
   @media screen and (min-width: 1440px) {

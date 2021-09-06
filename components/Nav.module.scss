@@ -13,6 +13,7 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1112px;
+
   @include navBreakpoint {
     top: 83px;
     padding: 0 24px;
@@ -59,15 +60,10 @@
     }
   }
 
-  .navList {
-    display: flex;
-    color: #fff;
-    mix-blend-mode: normal;
-    opacity: 0.75;
-  }
-
   .navItem {
     margin-right: 32px;
+    cursor: pointer;
+    position: relative;
   }
 
   .navItemText {
@@ -76,10 +72,24 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 1.125rem;
-    margin-right: 8px;
     color: #fff;
     mix-blend-mode: normal;
     opacity: 0.75;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      border-bottom: 1px solid #fff;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .arrowContainer {
+    display: inline-block;
+    margin-left: 8px;
+
+    transition: all 0.5s ease-in-out;
   }
 
   .loginText {
@@ -92,11 +102,25 @@
     mix-blend-mode: normal;
     opacity: 0.75;
     margin-right: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transition: all 0.2s ease-in-out;
+    }
   }
 
   .signUpBtn {
     color: $cta-text;
     background-color: #fff;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      background: #ff7b86;
+      transition: all 0.2s ease-in-out;
+      color: #fff;
+    }
   }
 
   .hamburgerBtn {
@@ -148,4 +172,9 @@
       display: none;
     }
   }
+}
+
+.flipArrow {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
 }
