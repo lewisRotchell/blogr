@@ -61,7 +61,7 @@ export const Nav: React.FC<NavProps> = ({}) => {
                   subMenu.product ? classes.flipArrow : ""
                 }`}
               >
-                <Image src={ArrowLight} width={12} height={8} />
+                <Image src={ArrowLight} width={12} height={8} alt={"arrow"} />
               </div>
 
               <NavSubMenu

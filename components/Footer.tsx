@@ -11,7 +11,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
     <footer className={classes.footer}>
       <nav className={classes.nav}>
         <div className={classes.imgContainer}>
-          <Image src={Logo} width={101} height={40} />
+          <Image src={Logo} width={101} height={40} alt={"Blogr Logo"} />
         </div>
         <div className={classes.navGroup}>
           <p className={classes.navGroupTitle}>Product</p>

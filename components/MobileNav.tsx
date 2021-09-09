@@ -41,7 +41,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children, showMenu }) => {
               subMenu.product ? classes.flipArrow : ""
             }`}
           >
-            <Image src={ArrowDark} width={10} height={6} />
+            <Image src={ArrowDark} width={10} height={6} alt={"arrow"} />
           </div>
         </button>
         <MobileSubMenu
@@ -70,7 +70,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children, showMenu }) => {
               subMenu.company ? classes.flipArrow : ""
             }`}
           >
-            <Image src={ArrowDark} width={10} height={6} />
+            <Image src={ArrowDark} width={10} height={6} alt={"arrow"} />
           </div>
         </button>
         <MobileSubMenu
@@ -93,7 +93,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ children, showMenu }) => {
               subMenu.connect ? classes.flipArrow : ""
             }`}
           >
-            <Image src={ArrowDark} width={10} height={6} />
+            <Image src={ArrowDark} width={10} height={6} alt={"arrow"} />
           </div>
         </button>
         <MobileSubMenu

@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Blogr</title>
         <meta name="description" content="Blogging app" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" />
       </Head>
       <Layout>
         <Component {...pageProps} />
